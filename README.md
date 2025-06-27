@@ -3,7 +3,7 @@
 ## Overview
 AI Noted Pad is a comprehensive web-based productivity application that combines traditional note-taking with modern features like AI assistance, mind mapping, and task management. This all-in-one solution helps users organize thoughts, visualize ideas, and manage tasks efficiently.
 
-![AI Noted Pad Logo](./client/public/logo.png)
+![AI Noted Pad Logo](https://cdn-icons-png.flaticon.com/512/1160/1160515.png)
 
 ## Key Features
 
