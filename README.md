@@ -1,73 +1,166 @@
-# Welcome to your Lovable project
+# AI Noted Pad - Modern Note-Taking Web Application
 
-## Project info
+## Overview
+AI Noted Pad is a comprehensive web-based productivity application that combines traditional note-taking with modern features like AI assistance, mind mapping, and task management. This all-in-one solution helps users organize thoughts, visualize ideas, and manage tasks efficiently.
 
-**URL**: https://lovable.dev/projects/84297f68-b77e-4fef-a478-94d9d2260430
+![AI Noted Pad Logo](./client/public/logo.png)
 
-## How can I edit this code?
+## Key Features
 
-There are several ways of editing your application.
+### 1. Intelligent Note-Taking
+- Rich text editing with formatting options
+- AI-powered content suggestions
+- Markdown support
+- Note categorization and tagging
 
-**Use Lovable**
+### 2. Visual Mind Mapping
+- Interactive node-based interface
+- Drag-and-drop functionality
+- Multiple layout options (radial, hierarchical)
+- Export to image/PDF formats
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/84297f68-b77e-4fef-a478-94d9d2260430) and start prompting.
+### 3. Smart Task Management
+- Priority-based task organization
+- Due date reminders and notifications
+- Progress tracking with visual indicators
+- Subtask support
 
-Changes made via Lovable will be committed automatically to this repo.
+### 4. AI Integration
+- Context-aware suggestions
+- Automated note summarization
+- Content generation assistance
+- Natural language processing
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+AI-Noted-Pad/
+├── client/              # Frontend React application
+│   ├── public/          # Static assets
+│   └── src/             # React components and logic
+│       ├── components/  # UI components
+│       ├── pages/       # Application views
+│       └── styles/      # CSS modules
+├── server/              # Node.js backend
+│   ├── controllers/     # Business logic
+│   ├── models/          # Database models
+│   └── routes/          # API endpoints
+├── assets/              # Design assets
+└── docs/                # Documentation
 ```
 
-**Edit a file directly in GitHub**
+## Installation Guide
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
+- Node.js (v16 or later)
+- npm or yarn
+- MongoDB (for database)
 
-**Use GitHub Codespaces**
+### Setup Instructions
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dbaidya811/AI-Noted-Pad.git
+   cd AI-Noted-Pad
+   ```
 
-## What technologies are used for this project?
+2. Install dependencies for both client and server:
+   ```bash
+   cd client && npm install
+   cd ../server && npm install
+   ```
 
-This project is built with:
+3. Set up environment variables:
+   - Create `.env` files in both `client` and `server` directories
+   - Configure required variables (see `.env.example` files)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+4. Start the development servers:
+   ```bash
+   # In one terminal (server)
+   cd server && npm run dev
 
-## How can I deploy this project?
+   # In another terminal (client)
+   cd client && npm start
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/84297f68-b77e-4fef-a478-94d9d2260430) and click on Share -> Publish.
+5. Access the application at:
+   ```
+   http://localhost:3000
+   ```
 
-## Can I connect a custom domain to my Lovable project?
+## Technology Stack
 
-Yes, you can!
+### Frontend
+- React.js with Hooks
+- Redux for state management
+- Draft.js for rich text editing
+- D3.js for mind map visualizations
+- Material-UI for components
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Backend
+- Node.js with Express
+- MongoDB with Mongoose
+- JWT for authentication
+- OpenAI API integration
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Development Tools
+- Webpack
+- Babel
+- ESLint
+- Prettier
+
+## Usage Guide
+
+### Creating Notes
+1. Click "New Note" in the sidebar
+2. Use the formatting toolbar for styling
+3. Type `//` for AI suggestions
+4. Save automatically or manually with Ctrl+S
+
+### Building Mind Maps
+1. Switch to Mind Map view
+2. Double-click to add nodes
+3. Drag between nodes to create connections
+4. Right-click nodes for options (color, shape, etc.)
+
+### Managing Tasks
+1. Navigate to the To-Do section
+2. Add tasks with due dates and priorities
+3. Drag to reorder or create dependencies
+4. Use the AI assistant for task suggestions
+
+## API Documentation
+
+The backend provides RESTful endpoints for:
+
+- User authentication (`/api/auth`)
+- Note operations (`/api/notes`)
+- Mind map operations (`/api/mindmaps`)
+- Task management (`/api/tasks`)
+- AI services (`/api/ai`)
+
+See [API Documentation](./docs/API.md) for detailed information.
+
+## Contributing
+
+We welcome contributions! Please follow these guidelines:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For support or feature requests:
+- Open an issue on GitHub
+- Contact the maintainer at dbaidya811@gmail.com
+
+---
+
+*Note: Make sure to update the logo path and contact information as needed. Include additional screenshots in the `assets` directory to showcase the application's interface.*
